@@ -118,13 +118,15 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Explore Your China Opportunity?</h2>
                 <p class="text-lg text-blue-100 max-w-3xl mx-auto mb-8">Let's start with a free, no-obligation preliminary assessment. Provide your company website, and our experts will give you initial feedback within 48 hours.</p>
                 <div class="max-w-lg mx-auto">
-                    <form action="#" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/meoljwry" method="POST">
                         <div class="grid grid-cols-1 gap-4">
                             <input type="text" name="company_website" placeholder="Your Company Website" required class="w-full p-3 border rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <input type="email" name="email" placeholder="Your Business Email" required class="w-full p-3 border rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="hidden" name="_subject" value="New BizToCN assessment request">
                             <button type="submit" class="w-full bg-white text-blue-800 px-8 py-3 rounded-lg text-lg font-bold hover:bg-gray-200 transition duration-300">
                                 Get My Free Assessment
                             </button>
+                            <div id="form-status" class="text-sm"></div>
                         </div>
                     </form>
                 </div>
@@ -152,6 +154,36 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Contact form submit via fetch (enhanced UX)
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                formStatus.className = 'text-sm text-blue-100';
+                formStatus.textContent = 'Sending...';
+                const formData = new FormData(contactForm);
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        formStatus.className = 'text-sm text-green-200';
+                        formStatus.textContent = 'Thanks! We will get back within 48 hours.';
+                        contactForm.reset();
+                    } else {
+                        formStatus.className = 'text-sm text-red-200';
+                        formStatus.textContent = 'Submission failed. Please try again or email contact@biztocn.com';
+                    }
+                } catch (err) {
+                    formStatus.className = 'text-sm text-red-200';
+                    formStatus.textContent = 'Network error. Please try again later.';
+                }
+            });
+        }
     </script>
 
 </body>
