@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目列表 - 合规扫描工具平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .container {
+            max-width: 1024px !important;
+        }
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800 flex items-center">
+                <i class="fas fa-shield-alt text-blue-600 mr-3 text-2xl"></i>
+                <span>合规扫描工具平台</span>
+            </h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="dashboard.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">项目列表</a>
+                <a href="policies.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">政策资料</a>
+                <a href="settings.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">设置</a>
+            </nav>
+            <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
+                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">网站合规性检查</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="url" id="urlInput" placeholder="请输入网站URL (例如: https://example.com)" required 
+                       class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <button onclick="checkWebsite()" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-search mr-2"></i>检查
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">历史报告</h3>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='report.html'">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">example.com - 合规性报告</h4>
+                    <p class="text-gray-600 mb-1">检查时间: 2024-01-15 14:30</p>
+                    <p class="text-gray-600">状态: <span class="text-yellow-600 font-medium">部分合规 (需要改进)</span></p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='report.html'">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">test-site.com - 合规性报告</h4>
+                    <p class="text-gray-600 mb-1">检查时间: 2024-01-10 09:15</p>
+                    <p class="text-gray-600">状态: <span class="text-green-600 font-medium">基本合规 (建议优化)</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>合规扫描工具平台 - 功能演示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* 自定义容器最大宽度 */
+        .container {
+            max-width: 1024px !important;
+        }
+        /* 确保在所有断点下都保持1024px最大宽度 */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1024px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-6 py-8">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6">合规扫描工具平台 - 功能演示</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">体验完整的合规分析流程和用户界面</p>
+        </header>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">🏠 首页功能</h2>
+            <p class="text-lg text-gray-600 mb-8">简洁的首页设计，突出核心功能选择</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">查看报告</h4>
+                    <p class="text-gray-600 mb-6">输入网站URL，获取详细的合规性分析报告</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showHomePage()">
+                        体验首页
+                    </button>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">用户登录</h4>
+                    <p class="text-gray-600 mb-6">登录后管理您的项目和查看历史报告</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showLoginPage()">
+                        体验登录
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">📊 项目列表页面</h2>
+            <p class="text-lg text-gray-600 mb-8">URL输入检查和历史报告管理</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">URL检查</h4>
+                    <p class="text-gray-600 mb-6">输入网站地址，开始合规性检查</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showDashboardPage()">
+                        体验项目列表
+                    </button>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">历史报告</h4>
+                    <p class="text-gray-600 mb-6">查看和管理之前的检查报告</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showReportPage()">
+                        查看报告示例
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">📋 合规报告详情</h2>
+            <p class="text-lg text-gray-600 mb-8">详细的合规分析结果和改善建议</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">汇总概览</h4>
+                    <p class="text-gray-600 mb-6">绿勾✅、黄色叹号⚠️、红色叹号❌、红色叉🚨</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showReportPage()">
+                        查看完整报告
+                    </button>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">模块分析</h4>
+                    <p class="text-gray-600 mb-6">数据安全、内容合规、技术架构等模块</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showReportPage()">
+                        探索模块
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">📚 政策资料库</h2>
+            <p class="text-lg text-gray-600 mb-8">法规政策解读和合规指南</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">政策列表</h4>
+                    <p class="text-gray-600 mb-6">网络安全法、数据安全法等法规</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showPoliciesPage()">
+                        浏览政策
+                    </button>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">详细解读</h4>
+                    <p class="text-gray-600 mb-6">政策要点分析和实施建议</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showPoliciesPage()">
+                        查看详情
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">⚙️ 用户设置</h2>
+            <p class="text-lg text-gray-600 mb-8">账户管理和个性化设置</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">基本信息</h4>
+                    <p class="text-gray-600 mb-6">修改显示名称和邮箱地址</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showSettingsPage()">
+                        管理账户
+                    </button>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition duration-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">安全设置</h4>
+                    <p class="text-gray-600 mb-6">修改密码和退出登录</p>
+                    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300" onclick="showSettingsPage()">
+                        安全设置
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-12 text-center text-white">
+            <h2 class="text-3xl font-bold mb-6">🚀 开始体验</h2>
+            <p class="text-xl text-blue-100 mb-8">点击下方按钮开始完整的用户体验流程</p>
+            <button class="bg-white text-blue-600 px-8 py-4 rounded-lg text-xl font-bold hover:bg-gray-100 transition duration-300" onclick="startFullDemo()">
+                开始完整演示
+            </button>
+        </div>
+
+        <footer class="text-center mt-16 text-gray-600">
+            <p>&copy; 2025 合规扫描工具平台. 专业的企业合规解决方案.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+    <script>
+        // 演示功能函数
+        function showHomePage() {
+            if (window.app) {
+                window.app.showPage('home');
+            }
+        }
+
+        function showLoginPage() {
+            if (window.app) {
+                window.app.showPage('login');
+            }
+        }
+
+        function showDashboardPage() {
+            if (window.app) {
+                window.app.showPage('dashboard');
+            }
+        }
+
+        function showReportPage() {
+            if (window.app) {
+                window.app.showPage('report');
+            }
+        }
+
+        function showPoliciesPage() {
+            if (window.app) {
+                window.app.showPage('policies');
+            }
+        }
+
+        function showSettingsPage() {
+            if (window.app) {
+                window.app.showPage('settings');
+            }
+        }
+
+        function startFullDemo() {
+            if (window.app) {
+                window.app.showPage('home');
+            }
+        }
+
+        // 页面加载完成后初始化应用
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!window.app) {
+                window.app = new ComplianceScanner();
+            }
+        });
+    </script>
+</body>
+</html>
