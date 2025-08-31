@@ -41,7 +41,7 @@ function checkWebsite() {
         checkButton.disabled = false;
         
         // 跳转到报告页面
-        window.location.href = 'report.html';
+        window.location.href = '/prototype/pages/report.html';
     }, 2000);
 }
 
@@ -49,7 +49,7 @@ function checkWebsite() {
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
-        window.location.href = 'login.html';
+        window.location.href = '/prototype/pages/login.html';
     }
 }
 
@@ -57,5 +57,5 @@ function checkAuth() {
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
-    window.location.href = '../index.html';
+    window.location.href = '/prototype/index.html';
 }

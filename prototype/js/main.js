@@ -399,12 +399,12 @@ class ComplianceScanner {
 
     // 查看报告（公开功能）
     viewReport() {
-        window.location.href = 'pages/report.html';
+        window.location.href = '/prototype/pages/report.html';
     }
 
     // 前往登录
     goToLogin() {
-        window.location.href = 'pages/login.html';
+        window.location.href = '/prototype/pages/login.html';
     }
 
     // 绑定移动端菜单

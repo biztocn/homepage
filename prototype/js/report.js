@@ -62,7 +62,7 @@ function addBackToTopButton() {
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
-        window.location.href = 'login.html';
+        window.location.href = '/prototype/pages/login.html';
     }
 }
 
@@ -70,7 +70,7 @@ function checkAuth() {
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
-    window.location.href = '../index.html';
+    window.location.href = '/prototype/index.html';
 }
 
 // 打印报告

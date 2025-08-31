@@ -90,7 +90,7 @@ function deleteAccount() {
         localStorage.removeItem('userDisplayName');
         
         alert('账户已删除');
-        window.location.href = '../index.html';
+        window.location.href = '/prototype/index.html';
     }
 }
 
@@ -98,7 +98,7 @@ function deleteAccount() {
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
-        window.location.href = 'login.html';
+        window.location.href = '/prototype/pages/login.html';
     }
 }
 
@@ -107,5 +107,5 @@ function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
     localStorage.removeItem('userDisplayName');
-    window.location.href = '../index.html';
+    window.location.href = '/prototype/index.html';
 }

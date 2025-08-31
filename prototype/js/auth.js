@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('userEmail', email);
                 
                 // 跳转到仪表板
-                window.location.href = 'dashboard.html';
+                window.location.href = '/prototype/pages/dashboard.html';
             } else {
                 alert('请输入邮箱和密码');
             }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
-        window.location.href = 'login.html';
+        window.location.href = '/prototype/pages/login.html';
     }
 }
 
@@ -36,7 +36,7 @@ function checkAuth() {
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
-    window.location.href = '../index.html';
+    window.location.href = '/prototype/index.html';
 }
 
 // 在需要认证的页面调用
