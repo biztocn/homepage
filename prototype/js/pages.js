@@ -1,6 +1,6 @@
-// 扩展ComplianceScanner类，添加其他页面功能
+// Extend ComplianceScanner class, add other page functionality
 Object.assign(ComplianceScanner.prototype, {
-    // 显示报告页面
+    // Show report page
     showReportPage() {
         document.body.innerHTML = `
             <div class="bg-gray-50 text-gray-800 min-h-screen">
@@ -8,135 +8,135 @@ Object.assign(ComplianceScanner.prototype, {
                     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
                         <h1 class="text-2xl font-bold text-gray-800 flex items-center">
                             <i class="fas fa-shield-alt text-blue-600 mr-3 text-2xl"></i>
-                            <span>合规扫描工具平台</span>
+                            <span>Compliance Scanner Platform</span>
                         </h1>
                         <nav class="hidden md:flex items-center space-x-8">
-                            <a href="#" data-page="dashboard" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">项目列表</a>
-                            <a href="#" data-page="policies" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">政策资料</a>
-                            <a href="#" data-page="settings" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">设置</a>
+                            <a href="#" data-page="dashboard" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Project List</a>
+                            <a href="#" data-page="policies" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Policy Resources</a>
+                            <a href="#" data-page="settings" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Settings</a>
                         </nav>
                         <button onclick="app.logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
-                            <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                            <i class="fas fa-sign-out-alt mr-2"></i>Logout
                         </button>
                     </div>
                 </header>
 
                 <main class="container mx-auto px-6 py-8">
-                    <!-- 报告封面页 - 模块状态综述 -->
+                    <!-- Report cover page - Module status summary -->
                     <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-4">网站合规性分析报告</h2>
-                        <p class="text-gray-600 mb-6">检查时间: 2024-01-15 14:30 | 网站: example.com</p>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Website Compliance Analysis Report</h2>
+                        <p class="text-gray-600 mb-6">Check Time: 2024-01-15 14:30 | Website: example.com</p>
                         
                         <div class="mb-8">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">合规模块状态综述</h3>
-                            <p class="text-gray-600 mb-6">基于您的业务模式，我们分析了以下5个关键合规模块的现状和风险等级。点击模块标题可查看详细分析。</p>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Compliance Module Status Summary</h3>
+                            <p class="text-gray-600 mb-6">Based on your business model, we have analyzed the current status and risk levels of the following 5 key compliance modules. Click on module titles to view detailed analysis.</p>
                             
                             <div class="space-y-6">
-                                <!-- 模块1: 基本工作 -->
+                                <!-- Module 1: Basic Operations -->
                                 <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-green-300 hover:shadow-lg transition duration-300">
                                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                                         <div class="flex items-center justify-between">
-                                            <h4 class="text-xl font-bold text-gray-800">基本工作 - 公司行政、人力</h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Basic Operations - Company Administration & HR</h4>
                                             <div class="flex items-center space-x-3">
                                                 <span class="text-green-600 text-2xl">✅</span>
-                                                <span class="text-green-700 font-semibold">低风险</span>
+                                                <span class="text-green-700 font-semibold">Low Effort</span>
                                             </div>
                                         </div>
-                                        <p class="text-gray-600 mt-2">公司注册、办公租赁、人力资源管理等基础行政事务，在中国有成熟的流程和标准。</p>
+                                        <p class="text-gray-600 mt-2">Company registration, office leasing, human resource management and other basic administrative tasks have mature processes and standards in China.</p>
                                     </div>
                                     <div class="p-6">
                                         <div class="flex items-center justify-between">
-                                            <div class="text-sm text-gray-500">门槛较低，流程标准化，适合外商进入</div>
+                                            <div class="text-sm text-gray-500">Low threshold, standardized processes, suitable for foreign companies</div>
                                             <a href="#module-1" class="text-green-600 hover:text-green-700 text-sm font-medium inline-flex items-center">
-                                                查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                                View Details <i class="fas fa-arrow-right ml-1"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 模块2: 公司业务领域 -->
+                                <!-- Module 2: Business Domain Analysis -->
                                 <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-yellow-300 hover:shadow-lg transition duration-300">
                                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                                         <div class="flex items-center justify-between">
-                                            <h4 class="text-xl font-bold text-gray-800">公司业务领域</h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Business Domain Analysis</h4>
                                             <div class="flex items-center space-x-3">
                                                 <span class="text-yellow-600 text-2xl">⚠️</span>
-                                                <span class="text-yellow-700 font-semibold">中等风险</span>
+                                                <span class="text-yellow-700 font-semibold">Moderate Effort</span>
                                             </div>
                                         </div>
-                                        <p class="text-gray-600 mt-2">某些行业存在外资准入限制或需要特殊许可，但通过合适的合作伙伴或业务结构调整可以克服。</p>
+                                        <p class="text-gray-600 mt-2">Some industries have foreign investment access restrictions or require special permits, but can be overcome through suitable partners or business model adjustments.</p>
                                     </div>
                                     <div class="p-6">
                                         <div class="flex items-center justify-between">
-                                            <div class="text-sm text-gray-500">存在法律壁垒，但可通过策略调整解决</div>
+                                            <div class="text-sm text-gray-500">Legal barriers exist but can be resolved through strategic adjustments</div>
                                             <a href="#module-2" class="text-yellow-600 hover:text-yellow-700 text-sm font-medium inline-flex items-center">
-                                                查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                                View Details <i class="fas fa-arrow-right ml-1"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 模块3: 数据和IT合规 -->
+                                <!-- Module 3: Data & IT Compliance Requirements -->
                                 <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-red-300 hover:shadow-lg transition duration-300">
                                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                                         <div class="flex items-center justify-between">
-                                            <h4 class="text-xl font-bold text-gray-800">数据和IT的合规需要</h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Data & IT Compliance Requirements</h4>
                                             <div class="flex items-center space-x-3">
                                                 <span class="text-red-600 text-2xl">❌</span>
-                                                <span class="text-red-700 font-semibold">高风险</span>
+                                                <span class="text-red-700 font-semibold">High Effort Required</span>
                                             </div>
                                         </div>
-                                        <p class="text-gray-600 mt-2">数据本地化、网络安全审查、ICP许可等要求严格，需要专业的技术和法律支持。</p>
+                                        <p class="text-gray-600 mt-2">Data localization, cybersecurity review, ICP licensing and other requirements are strict, requiring professional technical and legal support.</p>
                                     </div>
                                     <div class="p-6">
                                         <div class="flex items-center justify-between">
-                                            <div class="text-sm text-gray-500">技术要求高，法规复杂，需要专业团队支持</div>
+                                            <div class="text-sm text-gray-500">High technical requirements, complex regulations, need professional team support</div>
                                             <a href="#module-3" class="text-red-600 hover:text-red-700 text-sm font-medium inline-flex items-center">
-                                                查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                                View Details <i class="fas fa-arrow-right ml-1"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 模块4: 业务经营许可 -->
+                                <!-- Module 4: Business License Requirements -->
                                 <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-yellow-300 hover:shadow-lg transition duration-300">
                                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                                         <div class="flex items-center justify-between">
-                                            <h4 class="text-xl font-bold text-gray-800">业务经营是否需要办理特定牌照</h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Business License Requirements</h4>
                                             <div class="flex items-center space-x-3">
                                                 <span class="text-yellow-600 text-2xl">⚠️</span>
-                                                <span class="text-yellow-700 font-semibold">中等风险</span>
+                                                <span class="text-yellow-700 font-semibold">Moderate Effort</span>
                                             </div>
                                         </div>
-                                        <p class="text-gray-600 mt-2">根据业务性质可能需要金融、教育、医疗等特殊行业许可，申请流程较长但可完成。</p>
+                                        <p class="text-gray-600 mt-2">Depending on business nature, special industry licenses such as financial, education, medical may be required, with longer application processes but achievable.</p>
                                     </div>
                                     <div class="p-6">
                                         <div class="flex items-center justify-between">
-                                            <div class="text-sm text-gray-500">需要时间投入，但通过合规流程可以获得</div>
+                                            <div class="text-sm text-gray-500">Requires time investment but obtainable through compliance processes</div>
                                             <a href="#module-4" class="text-yellow-600 hover:text-yellow-700 text-sm font-medium inline-flex items-center">
-                                                查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                                View Details <i class="fas fa-arrow-right ml-1"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- 模块5: 专利或商标 -->
+                                <!-- Module 5: Intellectual Property Protection -->
                                 <div class="border border-gray-200 rounded-lg overflow-hidden hover:border-green-300 hover:shadow-lg transition duration-300">
                                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                                         <div class="flex items-center justify-between">
-                                            <h4 class="text-xl font-bold text-gray-800">专利或商标</h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Intellectual Property Protection</h4>
                                             <div class="flex items-center space-x-3">
                                                 <span class="text-green-600 text-2xl">✅</span>
-                                                <span class="text-green-700 font-semibold">低风险</span>
+                                                <span class="text-green-700 font-semibold">Low Effort</span>
                                             </div>
                                         </div>
-                                        <p class="text-gray-600 mt-2">知识产权保护在中国有完善的法律体系，申请流程透明，保护力度不断加强。</p>
+                                        <p class="text-gray-600 mt-2">Intellectual property protection in China has a comprehensive legal system, transparent application processes, and continuously strengthening protection.</p>
                                     </div>
                                     <div class="p-6">
                                         <div class="flex items-center justify-between">
-                                            <div class="text-sm text-gray-500">法律体系完善，流程标准化，保护力度强</div>
+                                            <div class="text-sm text-gray-500">Comprehensive legal system, standardized processes, strong protection</div>
                                             <a href="#module-5" class="text-green-600 hover:text-green-700 text-sm font-medium inline-flex items-center">
-                                                查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                                View Details <i class="fas fa-arrow-right ml-1"></i>
                                             </a>
                                         </div>
                                     </div>

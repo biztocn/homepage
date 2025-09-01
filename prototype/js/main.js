@@ -339,23 +339,23 @@ class ComplianceScanner {
                             <input type="url" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)" required 
                                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <button onclick="app.checkWebsite()" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                                <i class="fas fa-search mr-2"></i>检查
+                                <i class="fas fa-search mr-2"></i>Check
                             </button>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-lg shadow-lg p-8">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">历史报告</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Historical Reports</h3>
                         <div class="space-y-4">
                             <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="app.showPage('report')">
-                                <h4 class="text-xl font-semibold text-gray-800 mb-2">example.com - 合规性报告</h4>
-                                <p class="text-gray-600 mb-1">检查时间: 2024-01-15 14:30</p>
-                                <p class="text-gray-600">状态: <span class="text-yellow-600 font-medium">部分合规 (需要改进)</span></p>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">example.com - Compliance Report</h4>
+                                <p class="text-gray-600 mb-1">Check Time: 2024-01-15 14:30</p>
+                                <p class="text-gray-600">Status: <span class="text-yellow-600 font-medium">Partially Compliant (Needs Improvement)</span></p>
                             </div>
                             <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="app.showPage('report')">
-                                <h4 class="text-xl font-semibold text-gray-800 mb-2">test-site.com - 合规性报告</h4>
-                                <p class="text-gray-600 mb-1">检查时间: 2024-01-10 09:15</p>
-                                <p class="text-gray-600">状态: <span class="text-green-600 font-medium">基本合规 (建议优化)</span></p>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">test-site.com - Compliance Report</h4>
+                                <p class="text-gray-600 mb-1">Check Time: 2024-01-10 09:15</p>
+                                <p class="text-gray-600">Status: <span class="text-green-600 font-medium">Basically Compliant (Recommended Optimization)</span></p>
                             </div>
                         </div>
                     </div>
@@ -366,7 +366,7 @@ class ComplianceScanner {
         this.bindDashboardEvents();
     }
 
-    // 绑定仪表板事件
+    // Bind dashboard events
     bindDashboardEvents() {
         const navLinks = document.querySelectorAll('[data-page]');
         navLinks.forEach(link => {
@@ -378,36 +378,36 @@ class ComplianceScanner {
         });
     }
 
-    // 检查网站
+    // Check website
     checkWebsite() {
         const url = document.getElementById('urlInput').value;
         if (!url) {
-            alert('请输入有效的网站URL');
+            alert('Please enter a valid website URL');
             return;
         }
         
-        // 模拟检查过程
-        alert(`正在检查网站: ${url}\n\n检查完成！正在生成报告...`);
+        // Simulate check process
+        alert(`Checking website: ${url}\n\nCheck completed! Generating report...`);
         this.showPage('report');
     }
 
-    // 退出登录
+    // Logout
     logout() {
         this.isLoggedIn = false;
         this.showPage('home');
     }
 
-    // 查看报告（公开功能）
+    // View report (public function)
     viewReport() {
         window.location.href = '/prototype/pages/report.html';
     }
 
-    // 前往登录
+    // Go to login
     goToLogin() {
         window.location.href = '/prototype/pages/login.html';
     }
 
-    // 绑定移动端菜单
+    // Bind mobile menu
     bindMobileMenu() {
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -419,12 +419,12 @@ class ComplianceScanner {
     }
 }
 
-// 页面加载完成后初始化应用
+// Initialize application after page load
 document.addEventListener('DOMContentLoaded', () => {
     window.app = new ComplianceScanner();
 });
 
-// 全局函数，用于HTML中的onclick调用
+// Global functions for HTML onclick calls
 function viewReport() {
     if (window.app) {
         window.app.viewReport();
