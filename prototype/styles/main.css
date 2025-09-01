@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     padding: 20px;
 }
 
-/* 首页样式 */
+/* Homepage styles */
 .hero {
     text-align: center;
     color: white;
@@ -118,7 +118,7 @@ body {
     margin-top: 60px;
 }
 
-/* 导航栏样式 */
+/* Navigation bar styles */
 .navbar {
     background: white;
     border-radius: 20px;
@@ -161,7 +161,7 @@ body {
     color: white;
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;

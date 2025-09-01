@@ -1,4 +1,4 @@
-/* 登录页面样式 */
+/* Login page styles */
 .login-container {
     background: white;
     border-radius: 20px;
@@ -67,7 +67,7 @@
     text-decoration: none;
 }
 
-/* 项目列表页面样式 */
+/* Project list page styles */
 .project-header {
     background: white;
     border-radius: 20px;
@@ -148,7 +148,7 @@
     margin-bottom: 5px;
 }
 
-/* 报告页面样式 */
+/* Report page styles */
 .report-container {
     background: white;
     border-radius: 20px;
@@ -338,7 +338,7 @@
     font-size: 0.7rem;
 }
 
-/* 政策资料页面样式 */
+/* Policy resources page styles */
 .policy-list {
     background: white;
     border-radius: 20px;
@@ -375,7 +375,7 @@
     color: #999;
 }
 
-/* 设置页面样式 */
+/* Settings page styles */
 .settings-container {
     background: white;
     border-radius: 20px;
@@ -417,7 +417,7 @@
     transform: translateY(-2px);
 }
 
-/* 响应式设计补充 */
+/* Responsive design supplements */
 @media (max-width: 768px) {
     .url-input-group {
         flex-direction: column;
