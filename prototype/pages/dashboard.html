@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目列表 - 合规扫描工具平台</title>
+    <title>Project List - Compliance Scanner Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,43 +36,43 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-800 flex items-center">
                 <i class="fas fa-shield-alt text-blue-600 mr-3 text-2xl"></i>
-                <span>合规扫描工具平台</span>
+                <span>Compliance Scanner Platform</span>
             </h1>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">项目列表</a>
-                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">政策资料</a>
-                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">设置</a>
+                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">Project List</a>
+                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Policy Resources</a>
+                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Settings</a>
             </nav>
             <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
-                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
             </button>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-8">
         <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">网站合规性检查</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Website Compliance Check</h2>
             <div class="flex flex-col md:flex-row gap-4">
-                <input type="url" id="urlInput" placeholder="请输入网站URL (例如: https://example.com)" required 
+                <input type="url" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)" required 
                        class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <button onclick="checkWebsite()" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                    <i class="fas fa-search mr-2"></i>检查
+                    <i class="fas fa-search mr-2"></i>Check
                 </button>
             </div>
         </div>
 
         <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">历史报告</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Historical Reports</h3>
             <div class="space-y-4">
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/report.html'">
-                    <h4 class="text-xl font-semibold text-gray-800 mb-2">example.com - 合规性报告</h4>
-                    <p class="text-gray-600 mb-1">检查时间: 2024-01-15 14:30</p>
-                    <p class="text-gray-600">状态: <span class="text-yellow-600 font-medium">部分合规 (需要改进)</span></p>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">example.com - Compliance Report</h4>
+                    <p class="text-gray-600 mb-1">Check Time: 2024-01-15 14:30</p>
+                    <p class="text-gray-600">Status: <span class="text-yellow-600 font-medium">Partially Compliant (Needs Improvement)</span></p>
                 </div>
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/report.html'">
-                    <h4 class="text-xl font-semibold text-gray-800 mb-2">test-site.com - 合规性报告</h4>
-                    <p class="text-gray-600 mb-1">检查时间: 2024-01-10 09:15</p>
-                    <p class="text-gray-600">状态: <span class="text-green-600 font-medium">基本合规 (建议优化)</span></p>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">test-site.com - Compliance Report</h4>
+                    <p class="text-gray-600 mb-1">Check Time: 2024-01-10 09:15</p>
+                    <p class="text-gray-600">Status: <span class="text-green-600 font-medium">Basically Compliant (Recommended Optimization)</span></p>
                 </div>
             </div>
         </div>

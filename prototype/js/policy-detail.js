@@ -1,25 +1,25 @@
-// 政策详情页面功能
+// Policy detail page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // 检查登录状态
+    // Check login status
     checkAuth();
     
-    // 根据URL参数加载不同的政策内容
+    // Load different policy content based on URL parameters
     loadPolicyContent();
 });
 
-// 加载政策内容
+// Load policy content
 function loadPolicyContent() {
     const urlParams = new URLSearchParams(window.location.search);
     const policyId = urlParams.get('id');
     
-    // 根据政策ID加载不同内容（这里只是示例）
+    // Load different content based on policy ID (this is just an example)
     if (policyId) {
-        // 可以在这里根据ID加载不同的政策内容
-        console.log('加载政策ID:', policyId);
+        // Can load different policy content based on ID here
+        console.log('Loading policy ID:', policyId);
     }
 }
 
-// 检查登录状态
+// Check login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
@@ -27,30 +27,30 @@ function checkAuth() {
     }
 }
 
-// 退出登录
+// Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
     window.location.href = '/prototype/index.html';
 }
 
-// 下载PDF（模拟功能）
+// Download PDF (simulated functionality)
 function downloadPDF() {
-    alert('PDF下载功能正在开发中...');
+    alert('PDF download functionality is under development...');
 }
 
-// 分享功能
+// Share functionality
 function shareContent() {
     if (navigator.share) {
         navigator.share({
-            title: '《网络安全法》解读',
-            text: '了解中国网络安全法的核心要求',
+            title: 'Cybersecurity Law Interpretation',
+            text: 'Understand the core requirements of China\'s Cybersecurity Law',
             url: window.location.href
         });
     } else {
-        // 复制链接到剪贴板
+        // Copy link to clipboard
         navigator.clipboard.writeText(window.location.href).then(() => {
-            alert('链接已复制到剪贴板');
+            alert('Link has been copied to clipboard');
         });
     }
 }

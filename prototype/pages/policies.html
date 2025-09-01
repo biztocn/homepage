@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>政策资料 - 合规扫描工具平台</title>
+    <title>Policy Resources - Compliance Scanner Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,67 +36,67 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-800 flex items-center">
                 <i class="fas fa-shield-alt text-blue-600 mr-3 text-2xl"></i>
-                <span>合规扫描工具平台</span>
+                <span>Compliance Scanner Platform</span>
             </h1>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">项目列表</a>
-                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">政策资料</a>
-                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">设置</a>
+                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Project List</a>
+                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">Policy Resources</a>
+                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Settings</a>
             </nav>
             <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
-                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
             </button>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-8">
         <div class="bg-white rounded-lg shadow-lg p-8">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">政策资料</h2>
-            <p class="text-gray-600 mb-8">了解中国市场的相关法规和政策，帮助您更好地理解合规要求。</p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Policy Resources</h2>
+            <p class="text-gray-600 mb-8">Learn about relevant regulations and policies in the Chinese market to help you better understand compliance requirements.</p>
             
             <div class="space-y-6">
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/policy-detail.html?id=1'">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">《网络安全法》解读</h3>
-                    <p class="text-gray-600 mb-3">了解中国网络安全法的核心要求，包括数据本地化、网络安全审查等关键条款。</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cybersecurity Law Interpretation</h3>
+                    <p class="text-gray-600 mb-3">Understand the core requirements of China's Cybersecurity Law, including data localization, cybersecurity review, and other key provisions.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">发布时间: 2024-01-10</span>
-                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">阅读全文 <i class="fas fa-arrow-right ml-1"></i></span>
+                        <span class="text-sm text-gray-500">Published: 2024-01-10</span>
+                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">Read Full Article <i class="fas fa-arrow-right ml-1"></i></span>
                     </div>
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/policy-detail.html?id=2'">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">外资企业设立指南</h3>
-                    <p class="text-gray-600 mb-3">详细说明外资企业在中国设立公司的流程、要求和注意事项。</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Foreign Enterprise Establishment Guide</h3>
+                    <p class="text-gray-600 mb-3">Detailed explanation of the process, requirements, and considerations for foreign enterprises establishing companies in China.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">发布时间: 2024-01-08</span>
-                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">阅读全文 <i class="fas fa-arrow-right ml-1"></i></span>
+                        <span class="text-sm text-gray-500">Published: 2024-01-08</span>
+                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">Read Full Article <i class="fas fa-arrow-right ml-1"></i></span>
                     </div>
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/policy-detail.html?id=3'">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ICP许可证申请流程</h3>
-                    <p class="text-gray-600 mb-3">互联网信息服务提供者需要了解的ICP许可证申请要求和流程。</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">ICP License Application Process</h3>
+                    <p class="text-gray-600 mb-3">ICP license application requirements and process that internet information service providers need to understand.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">发布时间: 2024-01-05</span>
-                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">阅读全文 <i class="fas fa-arrow-right ml-1"></i></span>
+                        <span class="text-sm text-gray-500">Published: 2024-01-05</span>
+                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">Read Full Article <i class="fas fa-arrow-right ml-1"></i></span>
                     </div>
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/policy-detail.html?id=4'">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">数据保护法规更新</h3>
-                    <p class="text-gray-600 mb-3">最新数据保护法规的变化和对外资企业的影响分析。</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Data Protection Regulation Updates</h3>
+                    <p class="text-gray-600 mb-3">Analysis of the latest changes in data protection regulations and their impact on foreign enterprises.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">发布时间: 2024-01-03</span>
-                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">阅读全文 <i class="fas fa-arrow-right ml-1"></i></span>
+                        <span class="text-sm text-gray-500">Published: 2024-01-03</span>
+                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">Read Full Article <i class="fas fa-arrow-right ml-1"></i></span>
                     </div>
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg p-6 hover:border-blue-300 hover:shadow-md transition duration-300 cursor-pointer" onclick="window.location.href='/prototype/pages/policy-detail.html?id=5'">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">知识产权保护指南</h3>
-                    <p class="text-gray-600 mb-3">在中国申请专利、商标等知识产权的完整流程和保护策略。</p>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Intellectual Property Protection Guide</h3>
+                    <p class="text-gray-600 mb-3">Complete process and protection strategies for applying for patents, trademarks, and other intellectual property rights in China.</p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">发布时间: 2023-12-28</span>
-                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">阅读全文 <i class="fas fa-arrow-right ml-1"></i></span>
+                        <span class="text-sm text-gray-500">Published: 2023-12-28</span>
+                        <span class="text-blue-600 hover:text-blue-700 text-sm font-medium">Read Full Article <i class="fas fa-arrow-right ml-1"></i></span>
                     </div>
                 </div>
             </div>

@@ -1,16 +1,16 @@
-// 报告页面功能
+// Report page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // 检查登录状态
+    // Check login status
     checkAuth();
     
-    // 平滑滚动到锚点
+    // Smooth scrolling to anchors
     setupSmoothScrolling();
     
-    // 添加返回顶部功能
+    // Add back to top functionality
     addBackToTopButton();
 });
 
-// 设置平滑滚动
+// Setup smooth scrolling
 function setupSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -31,7 +31,7 @@ function setupSmoothScrolling() {
     });
 }
 
-// 添加返回顶部按钮
+// Add back to top button
 function addBackToTopButton() {
     const backToTopButton = document.createElement('button');
     backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -40,7 +40,7 @@ function addBackToTopButton() {
     
     document.body.appendChild(backToTopButton);
     
-    // 监听滚动事件
+    // Listen for scroll events
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
@@ -49,7 +49,7 @@ function addBackToTopButton() {
         }
     });
     
-    // 点击返回顶部
+    // Click to return to top
     backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -58,7 +58,7 @@ function addBackToTopButton() {
     });
 }
 
-// 检查登录状态
+// Check login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
@@ -66,35 +66,35 @@ function checkAuth() {
     }
 }
 
-// 退出登录
+// Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
     window.location.href = '/prototype/index.html';
 }
 
-// 打印报告
+// Print report
 function printReport() {
     window.print();
 }
 
-// 导出PDF（模拟功能）
+// Export PDF (simulated functionality)
 function exportPDF() {
-    alert('PDF导出功能正在开发中...');
+    alert('PDF export functionality is under development...');
 }
 
-// 分享报告
+// Share report
 function shareReport() {
     if (navigator.share) {
         navigator.share({
-            title: '网站合规性分析报告',
-            text: '查看我的网站合规性分析报告',
+            title: 'Website Compliance Analysis Report',
+            text: 'View my website compliance analysis report',
             url: window.location.href
         });
     } else {
-        // 复制链接到剪贴板
+        // Copy link to clipboard
         navigator.clipboard.writeText(window.location.href).then(() => {
-            alert('报告链接已复制到剪贴板');
+            alert('Report link has been copied to clipboard');
         });
     }
 }

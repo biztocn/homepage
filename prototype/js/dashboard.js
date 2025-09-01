@@ -1,51 +1,51 @@
-// 仪表板页面功能
+// Dashboard page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // 检查登录状态
+    // Check login status
     checkAuth();
     
-    // 绑定检查网站功能
+    // Bind website check functionality
     const checkButton = document.querySelector('button[onclick="checkWebsite()"]');
     if (checkButton) {
         checkButton.addEventListener('click', checkWebsite);
     }
 });
 
-// 检查网站功能
+// Check website functionality
 function checkWebsite() {
     const urlInput = document.getElementById('urlInput');
     const url = urlInput.value.trim();
     
     if (!url) {
-        alert('请输入网站URL');
+        alert('Please enter a website URL');
         return;
     }
     
-    // 验证URL格式
+    // Validate URL format
     try {
         new URL(url);
     } catch (e) {
-        alert('请输入有效的URL格式，例如: https://example.com');
+        alert('Please enter a valid URL format, e.g., https://example.com');
         return;
     }
     
-    // 显示加载状态
+    // Show loading state
     const checkButton = document.querySelector('button[onclick="checkWebsite()"]');
     const originalText = checkButton.innerHTML;
-    checkButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>检查中...';
+    checkButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Checking...';
     checkButton.disabled = true;
     
-    // 模拟检查过程（实际项目中应该调用后端API）
+    // Simulate check process (in actual project should call backend API)
     setTimeout(() => {
-        // 恢复按钮状态
+        // Restore button state
         checkButton.innerHTML = originalText;
         checkButton.disabled = false;
         
-        // 跳转到报告页面
+        // Redirect to report page
         window.location.href = '/prototype/pages/report.html';
     }, 2000);
 }
 
-// 检查登录状态
+// Check login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
@@ -53,7 +53,7 @@ function checkAuth() {
     }
 }
 
-// 退出登录
+// Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');

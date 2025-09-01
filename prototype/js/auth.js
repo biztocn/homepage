@@ -1,4 +1,4 @@
-// 认证相关功能
+// Authentication related functionality
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
     
@@ -9,22 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            // 简单的登录验证（实际项目中应该调用后端API）
+            // Simple login validation (in actual project should call backend API)
             if (email && password) {
-                // 模拟登录成功
+                // Simulate successful login
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userEmail', email);
                 
-                // 跳转到仪表板
+                // Redirect to dashboard
                 window.location.href = '/prototype/pages/dashboard.html';
             } else {
-                alert('请输入邮箱和密码');
+                alert('Please enter email and password');
             }
         });
     }
 });
 
-// 检查登录状态
+// Check login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
@@ -32,14 +32,14 @@ function checkAuth() {
     }
 }
 
-// 退出登录
+// Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');
     window.location.href = '/prototype/index.html';
 }
 
-// 在需要认证的页面调用
+// Call on pages that require authentication
 if (window.location.pathname.includes('dashboard.html') || 
     window.location.pathname.includes('report.html') || 
     window.location.pathname.includes('policies.html') || 

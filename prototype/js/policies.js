@@ -1,17 +1,17 @@
-// 政策资料页面功能
+// Policy resources page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // 检查登录状态
+    // Check login status
     checkAuth();
     
-    // 添加搜索功能
+    // Add search functionality
     addSearchFunctionality();
 });
 
-// 添加搜索功能
+// Add search functionality
 function addSearchFunctionality() {
     const searchInput = document.createElement('input');
     searchInput.type = 'text';
-    searchInput.placeholder = '搜索政策资料...';
+    searchInput.placeholder = 'Search policy resources...';
     searchInput.className = 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-6';
     searchInput.id = 'searchInput';
     
@@ -19,7 +19,7 @@ function addSearchFunctionality() {
     const firstChild = mainContent.firstChild;
     mainContent.insertBefore(searchInput, firstChild);
     
-    // 搜索功能
+    // Search functionality
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const policyItems = document.querySelectorAll('.border.border-gray-200.rounded-lg');
@@ -37,7 +37,7 @@ function addSearchFunctionality() {
     });
 }
 
-// 检查登录状态
+// Check login status
 function checkAuth() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (!isLoggedIn) {
@@ -45,7 +45,7 @@ function checkAuth() {
     }
 }
 
-// 退出登录
+// Logout
 function logout() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('userEmail');

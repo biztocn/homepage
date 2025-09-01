@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>设置 - 合规扫描工具平台</title>
+    <title>Settings - Compliance Scanner Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +36,15 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-800 flex items-center">
                 <i class="fas fa-shield-alt text-blue-600 mr-3 text-2xl"></i>
-                <span>合规扫描工具平台</span>
+                <span>Compliance Scanner Platform</span>
             </h1>
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">项目列表</a>
-                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">政策资料</a>
-                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">设置</a>
+                <a href="/prototype/pages/dashboard.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Project List</a>
+                <a href="/prototype/pages/policies.html" class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium">Policy Resources</a>
+                <a href="/prototype/pages/settings.html" class="px-4 py-2 rounded-lg text-blue-600 bg-blue-50 font-medium">Settings</a>
             </nav>
             <button onclick="logout()" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
-                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                <i class="fas fa-sign-out-alt mr-2"></i>Logout
             </button>
         </div>
     </header>
@@ -52,67 +52,67 @@
     <main class="container mx-auto px-6 py-8">
         <div class="max-w-2xl mx-auto">
             <div class="bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6">账户设置</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Account Settings</h2>
                 
                 <div class="space-y-8">
-                    <!-- 个人信息 -->
+                    <!-- Personal Information -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">个人信息</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Personal Information</h3>
                         <form id="profileForm" class="space-y-4">
                             <div>
-                                <label for="displayName" class="block text-sm font-medium text-gray-700 mb-2">显示名称</label>
-                                <input type="text" id="displayName" name="displayName" value="张三" 
+                                <label for="displayName" class="block text-sm font-medium text-gray-700 mb-2">Display Name</label>
+                                <input type="text" id="displayName" name="displayName" value="John Doe" 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">邮箱地址</label>
-                                <input type="email" id="email" name="email" value="zhangsan@example.com" 
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" value="johndoe@example.com" 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-                                保存个人信息
+                                Save Personal Information
                             </button>
                         </form>
                     </div>
                     
                     <hr class="border-gray-200">
                     
-                    <!-- 修改密码 -->
+                    <!-- Change Password -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">修改密码</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Change Password</h3>
                         <form id="passwordForm" class="space-y-4">
                             <div>
-                                <label for="currentPassword" class="block text-sm font-medium text-gray-700 mb-2">当前密码</label>
+                                <label for="currentPassword" class="block text-sm font-medium text-gray-700 mb-2">Current Password</label>
                                 <input type="password" id="currentPassword" name="currentPassword" required 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <div>
-                                <label for="newPassword" class="block text-sm font-medium text-gray-700 mb-2">新密码</label>
+                                <label for="newPassword" class="block text-sm font-medium text-gray-700 mb-2">New Password</label>
                                 <input type="password" id="newPassword" name="newPassword" required 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <div>
-                                <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">确认新密码</label>
+                                <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">Confirm New Password</label>
                                 <input type="password" id="confirmPassword" name="confirmPassword" required 
                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
-                                修改密码
+                                Change Password
                             </button>
                         </form>
                     </div>
                     
                     <hr class="border-gray-200">
                     
-                    <!-- 账户操作 -->
+                    <!-- Account Operations -->
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">账户操作</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Account Operations</h3>
                         <div class="space-y-4">
                             <button onclick="logout()" class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
-                                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                                <i class="fas fa-sign-out-alt mr-2"></i>Logout
                             </button>
                             <button onclick="deleteAccount()" class="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition duration-300">
-                                <i class="fas fa-trash mr-2"></i>删除账户
+                                <i class="fas fa-trash mr-2"></i>Delete Account
                             </button>
                         </div>
                     </div>
